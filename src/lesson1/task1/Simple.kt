@@ -23,7 +23,9 @@ fun sqr(x: Double) = x * x
  *
  * Вычисление дискриминанта квадратного уравнения
  */
-fun discriminant(a: Double, b: Double, c: Double) = sqr(b) - 4 * a * c
+fun discriminant(a: Double, b: Double, c: Double): Double {
+    return sqr(b) - 4 * a * c
+}
 
 /**
  * Пример
@@ -49,8 +51,12 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2 !!!")
+   /* val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
+    println("Root product: $x1x2 !!!");
+    println("Ответ: " + sqr(75));*/
+    val c = 7
+    val result = sqr(c)
+    println("$c * $c = $result")
 }
 
 /**
