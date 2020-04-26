@@ -92,8 +92,11 @@ fun main() {
     print(trackLength(x1, y1, x2, y2))
     */
 
-
-
+    /* задание 5 ПОИСК 3 ЦИФРЫ СПРАВА
+    print("Введите любое число больше 100: ")
+    val num = readLine()!!.toInt()
+    print("Третья цифра справа у числа $num: " + thirdDigit(num))
+    */
 
 }
 
@@ -115,7 +118,7 @@ fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
  * Определить длину того же отрезка в метрах (в данном случае 18.98).
  * 1 сажень = 3 аршина = 48 вершков, 1 вершок = 4.445 см.
  */
-fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double  {
+fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double {
 
     val vershokResult: Int
     vershokResult = sagenes * 48 + arshins * 16 + vershoks
@@ -144,17 +147,18 @@ fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
  */
 fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double {
     val lenghtResult: Double
-    lenghtResult = (sqr((y2 - y1)) + sqr ((x2 - x1)))
+    lenghtResult = (sqr((y2 - y1)) + sqr((x2 - x1)))
     return sqrt(lenghtResult)
 }
 
 /**
- * Простая
+ * +++ Простая
  *
  * Пользователь задает целое число, большее 100 (например, 3801).
  * Определить третью цифру справа в этом числе (в данном случае 8).
  */
-fun thirdDigit(number: Int): Int = TODO()
+fun thirdDigit(number: Int): Int = (number % 1000) / 100
+
 
 /**
  * Простая
