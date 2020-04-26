@@ -51,11 +51,7 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
-
-
-
-
-    /* ПЕРЕВОД В СЕКУНДЫ
+    /* задание 1 ПЕРЕВОД В СЕКУНДЫ
     print("Введите часы: ")
     val h = readLine()!!.toInt()
     print("Введите минуты: ")
@@ -66,6 +62,7 @@ fun main() {
     print("Результат: $seconds сек.")
     */
 
+    /* задание 2 ПЕРЕВОД САЖЕНЕЙ В МЕТРЫ
     print("Сколько саженей: ")
     val s = readLine()!!.toInt()
     print("Сколько аршин: ")
@@ -74,6 +71,29 @@ fun main() {
     val v = readLine()!!.toInt()
     val meters = lengthInMeters(s,a,v)
     print("Результат: ${meters.toFloat()} м.")
+    */
+
+    /* задание 3 ПЕРЕВОД В РАДИАНЫ
+    print("Градусы: ")
+    val deg = readLine()!!.toInt()
+    print("Минуты: ")
+    val  min = readLine()!!.toInt()
+    print("Секунды: ")
+    val sec = readLine()!!.toInt()
+    print("Результат: " + angleInRadian(deg,min,sec).toFloat() + " радиан")
+   */
+
+    /*задание 4 ПОИСК ДЛИНЫ ОТРЕЗКА
+    val x1 = 3.0
+    val y1 = 0.0
+    val x2 = 0.0
+    val y2 = 4.0
+
+    print(trackLength(x1, y1, x2, y2))
+    */
+
+
+
 
 }
 
@@ -104,20 +124,29 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double  {
 }
 
 /**
- * Тривиальная
+ * +++ Тривиальная
  *
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+    val radianResult: Double
+    radianResult = deg * 0.0174533 + min * 0.000290888 + sec * 4.8481e-6
+    return radianResult
+
+}
 
 /**
- * Тривиальная
+ * +++ Тривиальная
  *
  * Найти длину отрезка, соединяющего точки на плоскости с координатами (x1, y1) и (x2, y2).
  * Например, расстояние между (3, 0) и (0, 4) равно 5
  */
-fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
+fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double {
+    val lenghtResult: Double
+    lenghtResult = (sqr((y2 - y1)) + sqr ((x2 - x1)))
+    return sqrt(lenghtResult)
+}
 
 /**
  * Простая
