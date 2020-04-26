@@ -98,6 +98,15 @@ fun main() {
     print("Третья цифра справа у числа $num: " + thirdDigit(num))
     */
 
+    /* задание 6 ВРЕМЯ СЛЕДОВАНИЯ ПОЕЗДА
+    val hD = 9
+    val mD = 15
+    val hA = 13
+    val mA = 55
+    print(travelMinutes(hD, mD, hA, mA))
+*/
+
+
 }
 
 /**
@@ -108,7 +117,6 @@ fun main() {
  */
 fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
     return hours * 3600 + minutes * 60 + seconds //result
-
 }
 
 /**
@@ -119,11 +127,7 @@ fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
  * 1 сажень = 3 аршина = 48 вершков, 1 вершок = 4.445 см.
  */
 fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double {
-
-    val vershokResult: Int
-    vershokResult = sagenes * 48 + arshins * 16 + vershoks
-    return (vershokResult * 0.04445)
-
+    return (sagenes * 48 + arshins * 16 + vershoks) * 0.04445
 }
 
 /**
@@ -133,9 +137,9 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double {
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
 fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
-    val radianResult: Double
-    radianResult = deg * 0.0174533 + min * 0.000290888 + sec * 4.8481e-6
-    return radianResult
+
+    return deg * 0.0174533 + min * 0.000290888 + sec * 4.8481e-6
+
 
 }
 
@@ -167,7 +171,9 @@ fun thirdDigit(number: Int): Int = (number % 1000) / 100
  * прибыл на станцию назначения в h2 часов m2 минут того же дня (например в 13:01).
  * Определите время поезда в пути в минутах (в данном случае 216).
  */
-fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minutesArrive: Int): Int = TODO()
+fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minutesArrive: Int): Int {
+    return (hoursArrive*60 + minutesArrive) - (hoursDepart*60 + minutesDepart)
+}
 
 /**
  * Простая
