@@ -106,7 +106,14 @@ fun main() {
     print(travelMinutes(hD, mD, hA, mA))
 */
 
+    /* задание 7 ВКЛАД В БАНКЕ
+    print("Какая сумма вклада?: ")
+    val initial = readLine()!!.toInt()
+    print("Какой процент?: ")
+    val percent = readLine()!!.toInt()
 
+    println("Через 3 года на счету будет " + accountInThreeYears(initial, percent) + " руб.")
+    */
 }
 
 /**
@@ -182,7 +189,13 @@ fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minute
  * Сколько денег будет на счету через 3 года (с учётом сложных процентов)?
  * Например, 100 рублей под 10% годовых превратятся в 133.1 рубля
  */
-fun accountInThreeYears(initial: Int, percent: Int): Double = TODO()
+fun accountInThreeYears(initial: Int, percent: Int) : Double {
+    val percentS:Double = percent / 100.0
+    val first = initial + initial * percentS
+    val second = first + first * percentS
+    val third = second + second * percentS
+    return third
+}
 
 /**
  * Простая
