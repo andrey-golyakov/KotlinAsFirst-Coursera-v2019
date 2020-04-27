@@ -114,6 +114,15 @@ fun main() {
 
     println("Через 3 года на счету будет " + accountInThreeYears(initial, percent) + " руб.")
     */
+
+    /* задание 8 ЧИСЛО НАОБОРОТ
+
+    print("Введите трехзначное число: ")
+    val number = readLine()!!.toInt()
+    println(numberRevert(number))
+
+     */
+
 }
 
 /**
@@ -203,4 +212,10 @@ fun accountInThreeYears(initial: Int, percent: Int) : Double {
  * Пользователь задает целое трехзначное число (например, 478).
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
-fun numberRevert(number: Int): Int = TODO()
+fun numberRevert(number: Int): Int {
+    val third = ((number % 1000) / 100).toString()
+    val second = ((number % 100) / 10).toString()
+    val first = ((number % 10)).toString()
+    val str = first + second + third
+    return str.toInt()
+}
