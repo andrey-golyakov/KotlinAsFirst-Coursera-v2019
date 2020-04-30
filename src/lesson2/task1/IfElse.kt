@@ -57,13 +57,32 @@ fun minBiRoot(a: Double, b: Double, c: Double): Double {
     return -sqrt(y3)           // 7
 }
 
+fun main() {
+    val n = 132
+    if ((n % 10) == 1 && n != 11 && n != 111) {
+        println("$n год")
+    } else if (((n % 10) == 2 || (n % 10) == 3 || (n % 10) == 4) && n !in 12..14) {
+        println("$n года")
+    } else {
+        println("$n лет")
+    }
+}
+
 /**
- * Простая
+ * +++ Простая
  *
  * Мой возраст. Для заданного 0 < n < 200, рассматриваемого как возраст человека,
  * вернуть строку вида: «21 год», «32 года», «12 лет».
  */
-fun ageDescription(age: Int): String = TODO()
+fun ageDescription(age: Int): String {
+    if ((age % 10) == 1 && age != 11 && age != 111) {
+        return "$age год"
+    } else if (((age % 10) == 2 || (age % 10) == 3 || (age % 10) == 4) && age !in 12..14) {
+        return "$age года"
+    } else {
+        return "$age лет"
+    }
+}
 
 /**
  * Простая
